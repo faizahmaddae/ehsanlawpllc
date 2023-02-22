@@ -43,12 +43,12 @@
         <!-- top header -->
         <div class="container top-header">
             <div class="row">
-                <div class="col">
+                <div class="col-3 col-md-6">
                     <!-- logo -->
                     <?php echo get_custom_logo(); ?>
 
                 </div>
-                <div class="col d-flex align-items-center">
+                <div class="col-9 col-md-6 d-flex align-items-center header-social">
 
                     <div class="ms-auto">
                         <?php dynamic_sidebar('header-social-media-icons');; ?>
