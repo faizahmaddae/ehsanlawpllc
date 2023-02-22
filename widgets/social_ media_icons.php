@@ -77,7 +77,7 @@ class SocialMediaIcons_Widget extends WP_Widget {
         // print_r($instance);
 		echo $args['before_widget']; ?>
 
-                <ul class="social-top m-0">
+                <ul class="social-top m-0 p-0">
                     <li><a href="<?php echo $instance['link_1']?>"><?php echo $instance['icon_1'];?></a></li>
                     <li><a href="<?php echo $instance['link_2'];?>"><?php echo $instance['icon_2'];?></a></li>
                     <li><a href="<?php echo $instance['link_3'];?>"><?php echo $instance['icon_3'];?></a></li>
