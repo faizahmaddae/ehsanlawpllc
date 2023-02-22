@@ -8,6 +8,3 @@
 
 # website
     https://ehsanlawpllc.com
-
-    username: ehsan.masif@gmail.com
-    password: EhsanLawDar2021
