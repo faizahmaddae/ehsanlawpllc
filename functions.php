@@ -95,6 +95,19 @@ function ehsanlawpllc_setup()
 	add_theme_support('post-formats', array('aside'));
 	//  'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'
 
+	function get_nav_menu_items_by_location( $menu_location, $args = [] ) {
+  
+
+		$menu_locations = get_nav_menu_locations();
+	  
+		$menu_object = (isset($menu_locations[$menu_location]) ? wp_get_nav_menu_object($menu_locations[$menu_location]) : null);
+	  
+		$menu_name = (isset($menu_object->name) ? $menu_object->name : '');
+	  
+		return $menu_name;
+	  
+	  }
+
 	// rename video post format to Full width
 	function my_post_formats_video( $safe_text ) {
 		if ( $safe_text == 'Aside' )
