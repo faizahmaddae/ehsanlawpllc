@@ -79,26 +79,6 @@ class GotinTouchWidget extends WP_Widget
 
                         <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
 
-                        <!-- <form>
-                            <div class="mb-4">
-                                <input type="text" class="form-control" id="name" placeholder="Name">
-                            </div>
-                            <div class="mb-4">
-                                <input type="text" class="form-control" id="phone" placeholder="Phone">
-                            </div>
-
-                            <div class="mb-4">
-                                <input type="email" class="form-control" id="email" placeholder="Email">
-                            </div>
-
-                            <div class="mb-4">
-
-                                <textarea class="form-control" id="message" rows="4" placeholder="Message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-warning">Submit</button>
-                        </form> -->
-
-
                     </div>
 
                     <div class="col-12 col-md-5 d-flex align-items-center pt-4 pt-md-0">
