@@ -16,7 +16,7 @@
     <div class="container py-5">
         <footer class="row">
 
-            <div class="col text-center">
+            <div class="col-12 col-md-3 text-center">
                 <a href="index.html" class="d-flex align-items-center link-dark text-decoration-none">
                     <!-- <img src="./assets/images/footer-logo.png" alt="" class="m-auto"> -->
                     <?php echo get_custom_logo(); ?>
@@ -24,7 +24,7 @@
                 </a>
             </div>
 
-            <div class="col text-center">
+            <div class="col-12 col-md-3 text-center">
                 <h6 class="text-capitalize fw-bold text-white"><?php echo get_nav_menu_items_by_location('footer-menu-1'); ?></h6>
                 <ul class="nav flex-column">
                     <?php
@@ -43,7 +43,7 @@
                 </ul>
             </div>
 
-            <div class="col text-center">
+            <div class="col-12 col-md-3 text-center">
                 <h6 class="text-capitalize fw-bold text-white"><?php echo get_nav_menu_items_by_location('footer-menu-2'); ?></h6>
 
                 <ul class="nav flex-column">
@@ -59,7 +59,7 @@
                     ?>
                 </ul>
             </div>
-            <div class="col">
+            <div class="col-12 col-md-3">
                 <h6 class="text-capitalize fw-bold text-white text-center">Social Media</h6>
                 <br>
                 <div class="d-flex align-items-center">
