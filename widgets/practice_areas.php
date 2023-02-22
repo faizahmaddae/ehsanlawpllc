@@ -74,7 +74,7 @@ class PRACTICE_AREAS extends WP_Widget
                     <div class="col-12 col-md-3 my-2" data-aos="fade-up" data-aos-delay="<?php echo $c*100;?>">
                         <div class="card bg-dark text-white">
                             
-                            <img src="<?php echo get_the_post_thumbnail_url(null,'small'); ?>" class="img-fluid card-img" alt="<?php the_title();?>">
+                            <img src="<?php echo get_the_post_thumbnail_url(null,'practice_areas'); ?>" class="img-fluid card-img" alt="<?php the_title();?>">
                             <div class="card-img-overlay text-center d-flex align-items-center">
                                 <a href="<?php the_permalink();?>" class="text-white m-auto">
                                     <h5 class="card-title fw-bold m-auto"><?php echo get_the_title();?></h5>

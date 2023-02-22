@@ -89,6 +89,8 @@ function ehsanlawpllc_setup()
 	add_image_size( 'news_vertical', 620, 230, array( 'center', 'top' ) );
 
 	add_image_size( 'sidebar_news', 140, 90, true );
+	add_image_size( 'practice_areas', 294, 196, true );
+
 	// add_image_size( 'thumbnail', 200, 130, true );
 	// add_image_size( 'profile', 200, 200, true );
 
