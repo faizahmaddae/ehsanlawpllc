@@ -21,7 +21,7 @@
 
                 <?php $footer_logo = get_theme_mod( 'footer_logo' ); ?>
                 <?php if ( $footer_logo ) : ?>
-                    <img src="<?php echo esc_url( $footer_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                    <img class="m-auto" src="<?php echo esc_url( $footer_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
                 <?php endif; ?>
                 </a>
             </div>
