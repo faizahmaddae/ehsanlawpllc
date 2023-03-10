@@ -24,7 +24,9 @@ require get_template_directory() . '/widgets/news_posts.php';
 require get_template_directory() . '/widgets/services.php';
 require get_template_directory() . '/widgets/get_in_touch.php';
 require get_template_directory() . '/widgets/recent_news.php';
+require get_template_directory() . '/widgets/header_langs.php';
 require get_template_directory() . '/pagination.php';
+
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -81,15 +83,15 @@ function ehsanlawpllc_setup()
 		),
 	);
 
-	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'medium', 400, 250, true );
-	add_image_size( 'squre', 620, 480, true );
+	add_theme_support('post-thumbnails');
+	add_image_size('medium', 400, 250, true);
+	add_image_size('squre', 620, 480, true);
 	// add_image_size( 'news_horizantal', 620, 230, true );
 	// crop center top
-	add_image_size( 'news_vertical', 620, 230, array( 'center', 'top' ) );
+	add_image_size('news_vertical', 620, 230, array('center', 'top'));
 
-	add_image_size( 'sidebar_news', 140, 90, true );
-	add_image_size( 'practice_areas', 294, 196, true );
+	add_image_size('sidebar_news', 140, 90, true);
+	add_image_size('practice_areas', 294, 196, true);
 
 	// add_image_size( 'thumbnail', 200, 130, true );
 	// add_image_size( 'profile', 200, 200, true );
@@ -100,26 +102,49 @@ function ehsanlawpllc_setup()
 	add_theme_support('post-formats', array('aside'));
 	//  'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'
 
-	function get_nav_menu_items_by_location( $menu_location, $args = [] ) {
-  
+
+	function add_footer_logo_customizer($wp_customize)
+	{
+
+		// Add the setting for the footer logo
+		$wp_customize->add_setting('footer_logo');
+
+		// Add a control for the footer logo
+		$wp_customize->add_control(new WP_Customize_Image_Control(
+			$wp_customize,
+			'footer_logo',
+			array(
+				'label' => __('Footer Logo', 'textdomain'),
+				'section' => 'title_tagline',
+				'settings' => 'footer_logo',
+				'priority' => 8,
+			)
+		));
+	}
+	add_action('customize_register', 'add_footer_logo_customizer');
+
+
+	function get_nav_menu_items_by_location($menu_location, $args = [])
+	{
+
 
 		$menu_locations = get_nav_menu_locations();
-	  
+
 		$menu_object = (isset($menu_locations[$menu_location]) ? wp_get_nav_menu_object($menu_locations[$menu_location]) : null);
-	  
+
 		$menu_name = (isset($menu_object->name) ? $menu_object->name : '');
-	  
+
 		return $menu_name;
-	  
-	  }
+	}
 
 	// rename video post format to Full width
-	function my_post_formats_video( $safe_text ) {
-		if ( $safe_text == 'Aside' )
+	function my_post_formats_video($safe_text)
+	{
+		if ($safe_text == 'Aside')
 			return 'Show Featured';
 		return $safe_text;
 	}
-	add_filter( 'esc_html', 'my_post_formats_video' );
+	add_filter('esc_html', 'my_post_formats_video');
 
 
 	function add_additional_class_on_a($classes, $item, $args)
@@ -132,6 +157,13 @@ function ehsanlawpllc_setup()
 
 	add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
 
+
+	function get_custom_logo_url()
+	{
+		$custom_logo_id = get_theme_mod('custom_logo');
+		$image = wp_get_attachment_image_src($custom_logo_id, 'full');
+		return $image[0];
+	}
 
 
 	/*
@@ -243,6 +275,18 @@ function ehsanlawpllc_widgets_init()
 		array(
 			'name'          => esc_html__('Header Social Icons', 'ehsanlawpllc'),
 			'id'            => 'header-social-media-icons',
+			'description'   => esc_html__('Add widgets here.', 'ehsanlawpllc'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Header Langs', 'ehsanlawpllc'),
+			'id'            => 'header-langs',
 			'description'   => esc_html__('Add widgets here.', 'ehsanlawpllc'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

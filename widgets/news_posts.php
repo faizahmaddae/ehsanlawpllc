@@ -78,7 +78,7 @@ class NEWS_POSTS extends WP_Widget
 
                                 <div class="card-img-overlay d-flex align-items-center p-0">
                                     <a href="<?php the_permalink(); ?>" class="card-title mt-auto text-white px-2 py-3 mb-0 w-100">
-                                        <h5 class="fw-bold"><?php the_title(); ?></h5>
+                                        <h4 class="fw-bold"><?php the_title(); ?></h4>
                                     </a>
                                 </div>
                             </div>
@@ -116,8 +116,8 @@ class NEWS_POSTS extends WP_Widget
                                                         }; ?>" class="card-img" alt="<?php the_title(); ?>">
                                             <div class="card-img-overlay d-flex align-items-center p-0">
                                                 <a href="<?php the_permalink(); ?>" class="card-title mt-auto text-white px-2 py-3 mb-0 w-100">
-                                                    <h5 class="fw-bold"><?php the_title(); ?>
-                                                    </h5>
+                                                    <h4 class="fw-bold"><?php the_title(); ?>
+                                                    </h4>
                                                 </a>
                                             </div>
                                         </div>

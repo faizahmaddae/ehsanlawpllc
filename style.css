@@ -19,6 +19,9 @@ https://wp-skills.com/tools/wordpress-widget-generator
 */
 
 
+/* @import url('https://fonts.cdnfonts.com/css/helvetica-2'); */
+
+
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
@@ -31,7 +34,9 @@ html {
 
 
 body {
-	font-family: 'Titillium Web', sans-serif !important;
+	/* font-family: 'Titillium Web', sans-serif !important; */
+	font-family: 'Helvetica', sans-serif !important;
+
 }
 
 #primary {
@@ -40,7 +45,7 @@ body {
 
 .single p {
 	margin: 0;
-	font-size: 18px;
+	font-size: 16px;
 	margin: 0 0 1rem;
 	color: #5E5E5E;
 	font-weight: 200;
@@ -57,9 +62,7 @@ body {
 }
 
 /* hide on mobile */
-@media (max-width: 767.98px) {
-
-}
+@media (max-width: 767.98px) {}
 
 
 .page-link {
@@ -69,12 +72,55 @@ body {
 a {
 	text-decoration: none !important;
 	transition: all 0.3s ease;
+	font-family: Helvetica, sans-serif !important;
 }
 
 a:hover {
 	color: var(--primary-color) !important;
 }
 
+
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+.border {
+    border: var(--bs-border-width) var(--bs-border-style) #aaaeb3!important;
+}
+
+
+/* on tablet */
+@media (max-width: 991px) {
+	.news .squire-card {
+		max-height: unset !important;
+		height: auto !important;
+		overflow: visible !important;
+	}
+
+	.navbar-brand img{
+		max-width: 160px;
+	}
+}
+
+/* /news */
 
 .cover-bg {
 	width: 100%;
@@ -120,8 +166,25 @@ a:hover {
 	color: #fff;
 }
 
+.navbar {
+	height: 90px;
+}
+
+.navbar-nav {
+	position: static;
+	background-color: white !important;
+}
+
+.navbar-expand-lg {
+	z-index: 2000 !important
+}
+
+div.navbar-collapse.collapse.show {
+	background-color: white !important;
+}
+
 nav .navbar-nav li a {
-	color: white !important;
+	color: #111 !important;
 	text-transform: uppercase;
 	padding: 15px 20px !important;
 	font-weight: 900;
@@ -129,9 +192,9 @@ nav .navbar-nav li a {
 	transition: all 0.5s ease;
 }
 
-
 nav .navbar-nav li:hover>a {
 	background-color: #C0A663;
+	color: #fff !important;
 }
 
 nav .dropdown-menu {
@@ -177,7 +240,7 @@ nav .dropdown-menu {
 
 /* about */
 .about-text-info p {
-	font-size: 21px;
+	font-size: 18px;
 	color: #5E5E5E;
 }
 
@@ -223,8 +286,12 @@ img.img-info {
 	background-color: #EBECEE;
 }
 
+.practice a:hover {
+	color: var(--primary-color) !important;
+}
+
 .practice img.card-img {
-	filter: brightness(60%);
+	filter: brightness(50%);
 }
 
 /* /practice */
@@ -246,18 +313,6 @@ img.img-info {
 	--bs-card-border-radius: 0rem !important;
 	--bs-card-inner-border-radius: calc(0rem - 1px) !important;
 }
-
-/* on tablet */
-@media (max-width: 991px) {
-	.news .squire-card {
-		max-height: unset !important;
-		height: auto !important;
-		overflow: visible !important;
-	}
-}
-
-/* /news */
-
 
 
 /* other services */

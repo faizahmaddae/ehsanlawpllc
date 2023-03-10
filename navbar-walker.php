@@ -33,6 +33,7 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 
   function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
   {
+   
     $this->current_item = $item;
 
     $indent = ($depth) ? str_repeat("\t", $depth) : '';
@@ -73,6 +74,8 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
     $item_output .= $args->after;
 
     $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+
+    
   }
 }
 // register a new menu

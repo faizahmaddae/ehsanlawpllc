@@ -10,7 +10,7 @@
 
 ?>
 
-<div class="col-md-3 my-2" data-aos="fade-up" data-aos-delay="<?php echo $GLOBALS['counter']*100;?>">
+<div class="col-md-3 my-2" data-aos="fade-up" data-aos-delay="<?php echo $GLOBALS['counter'] * 100; ?>">
 
 
     <div class="card">

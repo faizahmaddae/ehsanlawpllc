@@ -19,15 +19,7 @@ get_header();
 			while (have_posts()) :
 				the_post();
 
-
 				get_template_part('template-parts/content-single', get_post_type());
-
-				// the_post_navigation(
-				// 	array(
-				// 		'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'ehsanlawpllc') . '</span> <span class="nav-title">%title</span>',
-				// 		'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'ehsanlawpllc') . '</span> <span class="nav-title">%title</span>',
-				// 	)
-				// );
 
 			endwhile; // End of the loop.
 			?>

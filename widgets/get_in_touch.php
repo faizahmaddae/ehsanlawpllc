@@ -72,7 +72,7 @@ class GotinTouchWidget extends WP_Widget
 
                     <div class="col-12 col-md-7">
 
-                        <h4 class="fw-bold display-6"><?php echo $instance['title']; ?></h4>
+                        <h2 class="fw-bold"><?php echo $instance['title']; ?></h2>
                         <p class="h4 py-3">
                             Please fill out the form and we will be in touch soon
                         </p>
@@ -84,10 +84,11 @@ class GotinTouchWidget extends WP_Widget
                     <div class="col-12 col-md-5 d-flex align-items-center pt-4 pt-md-0">
 
                         <div class="m-md-auto">
-                            <h5 class="fw-bold">Connect with us:</h5>
-                            <p>
+                            <h2 class="fw-bold">Connect with us:</h2>
+                            <p class="h5">
                                 For currort or anv suections
-                                Email tic at<br>
+                                Email tic at
+                                <br>
                                 <a href="mailto:<?php echo $instance['email']; ?>">
                                     <?php echo $instance['email']; ?>
                                 </a>
@@ -96,14 +97,14 @@ class GotinTouchWidget extends WP_Widget
                             <div class="address">
                                 <h5 class="fw-bold">US Adresss</h5>
                             </div>
-                            <p>
+                            <p class="h5">
                                <?php echo $instance['address']; ?>
                             </p>
 
                             <div class="Telephone">
                                 <h5 class="fw-bold">Telephone</h5>
                             </div>
-                            <p>
+                            <p class="h5">
                                 <a href="tel:<?php echo $instance['telephone']; ?>">
                                     <?php echo $instance['telephone']; ?>
                                 </a>

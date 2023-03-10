@@ -41,7 +41,7 @@ $format = get_post_format() ?? 'standard';
 
 <?php endif; ?>
 <br>
-<h1><?php the_title(); ?></h1>
+<h1 class="h3"><?php the_title(); ?></h1>
 <br>
 
 <?php the_content(); ?>

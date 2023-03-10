@@ -17,10 +17,12 @@
         <footer class="row">
 
             <div class="col-12 col-md-3 text-center">
-                <a href="index.html" class="d-flex align-items-center link-dark text-decoration-none">
-                    <!-- <img src="./assets/images/footer-logo.png" alt="" class="m-auto"> -->
-                    <?php echo get_custom_logo(); ?>
+                <a href="<?php echo get_site_url();?>" class="d-flex align-items-center link-dark text-decoration-none">
 
+                <?php $footer_logo = get_theme_mod( 'footer_logo' ); ?>
+                <?php if ( $footer_logo ) : ?>
+                    <img src="<?php echo esc_url( $footer_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                <?php endif; ?>
                 </a>
             </div>
 

@@ -57,7 +57,7 @@ class RecentNews_Widget extends WP_Widget
         <!-- recent-news -->
         <div class="recent-news my-5">
 
-            <h4 class="fw-bold"><?php echo $instance['title']; ?>
+            <h4 class="fw-bold my-3"><?php echo $instance['title']; ?>
             </h4>
 
             <?php while ($recentNewsPosts->have_posts()) : $recentNewsPosts->the_post(); ?>
