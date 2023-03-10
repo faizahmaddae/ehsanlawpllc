@@ -72,7 +72,7 @@ class HeaderLangs_Widget extends WP_Widget
                     </a>
                 </div>
                 <a href="tel:<?php echo $instance['phone'];?>" class="text-dark">
-                    <p><?php echo $instance['phone'];?></p>
+                    <p class="m-0"><?php echo $instance['phone'];?></p>
                 </a>
             </div>
         </div>
