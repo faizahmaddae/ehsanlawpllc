@@ -294,6 +294,10 @@ img.img-info {
 	filter: brightness(50%);
 }
 
+.practice .card .card-title{
+	text-shadow: 2px 1px 3px #000000 !important;
+}
+
 /* /practice */
 
 /* news */
