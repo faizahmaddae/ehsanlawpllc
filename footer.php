@@ -16,19 +16,19 @@
     <div class="container py-5">
         <footer class="row">
 
-            <div class="col-12 col-md-3 text-center">
+            <div class="col-12 col-md-3">
                 <a href="<?php echo get_site_url();?>" class="d-flex align-items-center link-dark text-decoration-none">
 
                 <?php $footer_logo = get_theme_mod( 'footer_logo' ); ?>
                 <?php if ( $footer_logo ) : ?>
-                    <img class="m-auto" src="<?php echo esc_url( $footer_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                    <img class="m-auto m-md-0" src="<?php echo esc_url( $footer_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
                 <?php endif; ?>
                 </a>
             </div>
 
-            <div class="col-6 col-md-3 text-center">
+            <div class="col-5 col-md-3 offset-1 offset-md-0">
                 <h6 class="text-capitalize fw-bold text-white"><?php echo get_nav_menu_items_by_location('footer-menu-1'); ?></h6>
-                <ul class="nav flex-column">
+                <ul class="nav flex-column text-start">
                     <?php
                     wp_nav_menu(array(
                         'items_wrap' => '%3$s',
@@ -37,18 +37,15 @@
                         'container'       => false,
                         'menu_class'      => 'nav-item mb-2',
                         'add_a_class'     => 'nav-item mb-2 text-white',
-
                     ));
                     ?>
-                    <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li> -->
-
                 </ul>
             </div>
 
-            <div class="col-6 col-md-3 text-center">
+            <div class="col-5 col-md-3 offset-1 offset-md-0">
                 <h6 class="text-capitalize fw-bold text-white"><?php echo get_nav_menu_items_by_location('footer-menu-2'); ?></h6>
 
-                <ul class="nav flex-column">
+                <ul class="nav flex-column text-start">
                     <?php
                     wp_nav_menu(array(
                         'items_wrap' => '%3$s',
@@ -61,7 +58,7 @@
                     ?>
                 </ul>
             </div>
-            <div class="col-12 col-md-3 mt-md-0 mt-lg-0 mt-4">
+            <div class="col-12 col-md-3 mt-md-0 mt-lg-0 mt-4 ">
                 <h6 class="text-capitalize fw-bold text-white text-center">Social Media</h6>
                 <br>
                 <div class="d-flex align-items-center">
