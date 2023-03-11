@@ -43,6 +43,10 @@ body {
 	min-height: 70vh;
 }
 
+.navbar-brand img{
+	max-width: 210px;
+}
+
 .single p {
 	margin: 0;
 	font-size: 16px;

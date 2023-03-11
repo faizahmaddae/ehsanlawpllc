@@ -45,7 +45,7 @@
         <!-- top header -->
         <div class="container top-header">
             <div class="row">
-                <div class="col-3 col-md-6">
+                <div class="col-3 col-md-6 logodiv">
                     <!-- logo -->
                     <?php echo get_custom_logo(); ?>
 
