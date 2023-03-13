@@ -31,7 +31,6 @@
 
     <!-- <script src="assets/script.js"></script> -->
     <?php $baseUrl = get_template_directory_uri(); ?>
-    
 
     <style>
         @font-face {
@@ -89,7 +88,7 @@
             font-weight: 900;
             src: local('Helvetica'), url(<?php echo $baseUrl;?>/assets/fonts/HELVETICA96BLACKITALIC.woff) format('woff')
         }
-    </style>
+    </style>    
 
     <?php wp_head(); ?>
 </head>
