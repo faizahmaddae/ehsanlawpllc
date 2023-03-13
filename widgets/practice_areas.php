@@ -77,7 +77,7 @@ class PRACTICE_AREAS extends WP_Widget
                             <img src="<?php echo get_the_post_thumbnail_url(null,'practice_areas'); ?>" class="img-fluid card-img" alt="<?php the_title();?>">
                             <div class="card-img-overlay text-center d-flex align-items-center">
                                 <a href="<?php the_permalink();?>" class="text-white m-auto">
-                                    <h3 class="card-title fw-bold m-auto"><?php echo get_the_title();?></h3>
+                                    <h4 class="card-title fw-bold m-auto"><?php echo get_the_title();?></h4>
                                 </a>
                             </div>
                         </div>
