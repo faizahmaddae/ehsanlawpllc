@@ -27,6 +27,21 @@ class GotinTouchWidget extends WP_Widget
                 'cat3'
             ),
         ),
+
+        array(
+            'label' => 'Heading',
+            'id' => 'heading',
+            'default' => 'Connect with us:',
+            'type' => 'text',
+        ),
+
+        array(
+            'label' => 'description',
+            'id' => 'description',
+            'default' => 'For support or any questions',
+            'type' => 'text',
+        ),
+
         
         array(
             'label' => 'Email',
@@ -35,10 +50,26 @@ class GotinTouchWidget extends WP_Widget
             'type' => 'text',
         ),
 
+
+        array(
+            'label' => 'Adresss text',
+            'id' => 'address_text',
+            'default' => 'US Adresss',
+            'type' => 'text',
+        ),
+
         array(
             'label' => 'Adresss',
             'id' => 'address',
             'default' => '5401 S Tacoma Way, suite 301. Tacoma. WA 98409',
+            'type' => 'text',
+        ),
+
+
+        array(
+            'label' => 'Telephone Text',
+            'id' => 'telephone_text',
+            'default' => 'Telephone',
             'type' => 'text',
         ),
 
@@ -60,8 +91,6 @@ class GotinTouchWidget extends WP_Widget
 
 ?>
 
-
-
         <!-- Got in Touch -->
 
         <div class="got-in-touch py-5">
@@ -73,10 +102,7 @@ class GotinTouchWidget extends WP_Widget
                     <div class="col-12 col-md-7">
 
                         <h2 class="fw-bold"><?php echo $instance['title']; ?></h2>
-                        <p class="h4 py-3">
-                            Please fill out the form and we will be in touch soon
-                        </p>
-
+                    
                         <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
 
                     </div>
@@ -84,10 +110,10 @@ class GotinTouchWidget extends WP_Widget
                     <div class="col-12 col-md-5 d-flex align-items-center pt-4 pt-md-0">
 
                         <div class="m-md-auto">
-                            <h2 class="fw-bold">Connect with us:</h2>
+                            <h2 class="fw-bold"><?php echo $instance['heading']; ?></h2>
                             <p class="h5">
-                                For currort or anv suections
-                                Email tic at
+                                <?php echo $instance['description']; ?>
+                                
                                 <br>
                                 <a href="mailto:<?php echo $instance['email']; ?>">
                                     <?php echo $instance['email']; ?>
@@ -95,14 +121,14 @@ class GotinTouchWidget extends WP_Widget
                             </p>
 
                             <div class="address">
-                                <h5 class="fw-bold">US Adresss</h5>
+                                <h5 class="fw-bold"><?php echo $instance['address_text'];?></h5>
                             </div>
                             <p class="h5">
                                <?php echo $instance['address']; ?>
                             </p>
 
                             <div class="Telephone">
-                                <h5 class="fw-bold">Telephone</h5>
+                                <h5 class="fw-bold"><?php echo $instance['telephone_text'];?></h5>
                             </div>
                             <p class="h5">
                                 <a href="tel:<?php echo $instance['telephone']; ?>">

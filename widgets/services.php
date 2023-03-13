@@ -105,7 +105,7 @@ class Services_Widget extends WP_Widget
 
                                     ?>
                                     <div class="clearfix mt-2"></div>
-                                    <a href="<?php the_permalink(); ?>" class="btn btn-warning">Read More</a>
+                                    <a href="<?php the_permalink(); ?>" class="btn btn-warning"><?php echo $instance['cta_label']; ?></a>
                                 </div>
                             </div>
 
