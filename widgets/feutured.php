@@ -53,6 +53,13 @@ class Feutured_Widget extends WP_Widget
 			'id' => 'link',
 			'default' => '',
 			'type' => 'url',
+		),
+
+		array(
+			'label' => 'link title',
+			'id' => 'link_title',
+			'default' => 'Contact Us',
+			'type' => 'text',
 		)
 	);
 
@@ -74,7 +81,7 @@ class Feutured_Widget extends WP_Widget
 						<h1 class="text-center display-1 fw-bold title" data-aos="fade-up"><?php echo $instance['heading_1']; ?></h1>
 						<h2 class="text-center display-6 fw-bold" data-aos="fade-up" data-aos-delay="300"><?php echo $instance['heading_2']; ?></h2>
 						<p class="fst-normal" style="letter-spacing: 3px;" data-aos="fade-up" data-aos-delay="400"><?php echo $instance['heading_3']; ?></p>
-						<a href="<?php echo $instance['link']; ?>" class="btn btn-warning" data-aos="fade-up" data-aos-delay="500">Contact Us</a>
+						<a href="<?php echo $instance['link']; ?>" class="btn btn-warning" data-aos="fade-up" data-aos-delay="500"><?php echo $instance['link_title'];?></a>
 					</div>
 				</div>
 			</div>

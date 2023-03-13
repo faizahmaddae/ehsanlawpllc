@@ -34,9 +34,7 @@ html {
 
 
 body {
-	/* font-family: 'Titillium Web', sans-serif !important; */
-	font-family: 'Helvetica', sans-serif !important;
-
+	font-family: 'Helvetica', sans-serif;
 }
 
 #primary {
@@ -45,6 +43,17 @@ body {
 
 .navbar-brand img{
 	max-width: 210px;
+}
+
+.phone-number{
+	font-size: 18px !important;
+}
+
+.myul{
+	columns: 2;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 .single p {

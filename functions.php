@@ -16,16 +16,45 @@ if (!defined('_S_VERSION')) {
 // https://wp-skills.com/tools/wordpress-widget-generator
 require_once('navbar-walker.php');
 // require_once('widgets/feutured.php');
-require get_template_directory() . '/widgets/feutured.php';
-require get_template_directory() . '/widgets/about.php';
-require get_template_directory() . '/widgets/social_ media_icons.php';
-require get_template_directory() . '/widgets/practice_areas.php';
-require get_template_directory() . '/widgets/news_posts.php';
-require get_template_directory() . '/widgets/services.php';
-require get_template_directory() . '/widgets/get_in_touch.php';
-require get_template_directory() . '/widgets/recent_news.php';
-require get_template_directory() . '/widgets/header_langs.php';
-require get_template_directory() . '/pagination.php';
+
+// if theme is parent theme
+
+// require get_template_directory() . '/widgets/feutured.php';
+// require get_template_directory() . '/widgets/about.php';
+// require get_template_directory() . '/widgets/social_ media_icons.php';
+// require get_template_directory() . '/widgets/practice_areas.php';
+// require get_template_directory() . '/widgets/news_posts.php';
+// require get_template_directory() . '/widgets/services.php';
+// require get_template_directory() . '/widgets/get_in_touch.php';
+// require get_template_directory() . '/widgets/recent_news.php';
+// require get_template_directory() . '/widgets/header_langs.php';
+
+if (!is_child_theme() ) {
+	// The active theme is a child theme
+	require get_template_directory() . '/widgets/feutured.php';
+	require get_template_directory() . '/widgets/about.php';
+	require get_template_directory() . '/widgets/social_ media_icons.php';
+	require get_template_directory() . '/widgets/practice_areas.php';
+	require get_template_directory() . '/widgets/news_posts.php';
+	require get_template_directory() . '/widgets/services.php';
+	require get_template_directory() . '/widgets/get_in_touch.php';
+	require get_template_directory() . '/widgets/recent_news.php';
+	require get_template_directory() . '/widgets/header_langs.php';
+	require get_template_directory() . '/pagination.php';
+	
+  } else {
+	// The active theme is a parent theme
+	// require get_stylesheet_directory() . '/widgets/feutured.php';
+	// require get_stylesheet_directory() . '/widgets/about.php';
+	// require get_stylesheet_directory() . '/widgets/social_ media_icons.php';
+	// require get_stylesheet_directory() . '/widgets/practice_areas.php';
+	// require get_stylesheet_directory() . '/widgets/news_posts.php';
+	// require get_stylesheet_directory() . '/widgets/services.php';
+	// require get_stylesheet_directory() . '/widgets/get_in_touch.php';
+	// require get_stylesheet_directory() . '/widgets/recent_news.php';
+	// require get_stylesheet_directory() . '/widgets/header_langs.php';
+  }
+
 
 
 /**

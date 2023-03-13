@@ -26,9 +26,9 @@
                 </a>
             </div>
 
-            <div class="col-5 col-md-3 offset-1 offset-md-0">
+            <div class="col-5 col-md-4 offset-1 offset-md-0">
                 <h6 class="text-capitalize fw-bold text-white"><?php echo get_nav_menu_items_by_location('footer-menu-1'); ?></h6>
-                <ul class="nav flex-column text-start">
+                <ul class="myul flex-column text-start">
                     <?php
                     wp_nav_menu(array(
                         'items_wrap' => '%3$s',
@@ -42,7 +42,7 @@
                 </ul>
             </div>
 
-            <div class="col-5 col-md-3 offset-1 offset-md-0">
+            <div class="col-5 col-md-2 offset-1 offset-md-0">
                 <h6 class="text-capitalize fw-bold text-white"><?php echo get_nav_menu_items_by_location('footer-menu-2'); ?></h6>
 
                 <ul class="nav flex-column text-start">

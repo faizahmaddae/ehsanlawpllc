@@ -69,7 +69,7 @@ class About_Widget extends WP_Widget {
                             
                         </div>
 
-                        <div class="col-12 col-md-9 col-lg-8 about-text-info" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-12 col-md-12 col-lg-8 about-text-info" data-aos="fade-up" data-aos-delay="300">
                             <h3 class="h2 fw-bold my-4"><?php the_title();?></h3>
                             <?php
                             // if has excerpt
