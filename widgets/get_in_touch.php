@@ -28,17 +28,18 @@ class GotinTouchWidget extends WP_Widget
             ),
         ),
 
-        array(
-            'label' => 'Heading',
-            'id' => 'heading',
-            'default' => 'Connect with us:',
-            'type' => 'text',
-        ),
 
         array(
-            'label' => 'description',
-            'id' => 'description',
-            'default' => 'For support or any questions',
+            'label' => 'Get IN Label',
+            'id' => 'get_in_label',
+            'default' => 'Connect with us',
+            'type' => 'text',
+        ),
+                
+        array(
+            'label' => 'Email Label',
+            'id' => 'email_label',
+            'default' => 'For currort or anv suections Email tic at',
             'type' => 'text',
         ),
 
@@ -49,11 +50,10 @@ class GotinTouchWidget extends WP_Widget
             'default' => 'asif@ehsanlawpllc.com',
             'type' => 'text',
         ),
-
-
+        
         array(
-            'label' => 'Adresss text',
-            'id' => 'address_text',
+            'label' => 'Adresss Label',
+            'id' => 'address_label',
             'default' => 'US Adresss',
             'type' => 'text',
         ),
@@ -65,10 +65,9 @@ class GotinTouchWidget extends WP_Widget
             'type' => 'text',
         ),
 
-
         array(
-            'label' => 'Telephone Text',
-            'id' => 'telephone_text',
+            'label' => 'Telephone Label',
+            'id' => 'telephone_label',
             'default' => 'Telephone',
             'type' => 'text',
         ),
@@ -92,7 +91,6 @@ class GotinTouchWidget extends WP_Widget
 ?>
 
         <!-- Got in Touch -->
-
         <div class="got-in-touch py-5">
 
             <div class="container">
@@ -102,7 +100,6 @@ class GotinTouchWidget extends WP_Widget
                     <div class="col-12 col-md-7">
 
                         <h2 class="fw-bold"><?php echo $instance['title']; ?></h2>
-                    
                         <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
 
                     </div>
@@ -110,27 +107,27 @@ class GotinTouchWidget extends WP_Widget
                     <div class="col-12 col-md-5 d-flex align-items-center pt-4 pt-md-0">
 
                         <div class="m-md-auto">
-                            <h2 class="fw-bold"><?php echo $instance['heading']; ?></h2>
-                            <p class="h5">
-                                <?php echo $instance['description']; ?>
+                            <h2 class="fw-bold"><?php echo $instance['get_in_label']; ?></h2>
+                            <p class="h5 fw-normal">
+                                <?php echo $instance['email_label']; ?>
                                 
-                                <br>
+                                <div class="clearfix"></div>
                                 <a href="mailto:<?php echo $instance['email']; ?>">
                                     <?php echo $instance['email']; ?>
                                 </a>
                             </p>
 
                             <div class="address">
-                                <h5 class="fw-bold"><?php echo $instance['address_text'];?></h5>
+                                <h5 class="fw-bold"><?php echo $instance['address_label'];?></h5>
                             </div>
-                            <p class="h5">
+                            <p class="h5 fw-normal">
                                <?php echo $instance['address']; ?>
                             </p>
 
                             <div class="Telephone">
-                                <h5 class="fw-bold"><?php echo $instance['telephone_text'];?></h5>
+                                <h5 class="fw-bold"><?php echo $instance['telephone_label']?></h5>
                             </div>
-                            <p class="h5">
+                            <p class="h5 fw-normal">
                                 <a href="tel:<?php echo $instance['telephone']; ?>">
                                     <?php echo $instance['telephone']; ?>
                                 </a>
